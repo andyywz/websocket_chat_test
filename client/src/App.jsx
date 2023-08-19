@@ -39,7 +39,6 @@ function App() {
   const fetchMessages = async () => {
     const res = await fetch('http://localhost:3000/messages')
     const data = await res.json()
-    console.log(data)
     setMessages(data)
   }
 
@@ -67,11 +66,11 @@ function App() {
       <button onClick={fetchMessages}>fetch</button>
 
       <div id="messages">
-        {messages.map(msg => {
+        {messages.map(msg => (
           <div className="message" key={msg.id}>
             <p>{msg.body}</p>
           </div>
-        })}
+        ))}
       </div>
 
       <form onSubmit={handleSubmit}>
