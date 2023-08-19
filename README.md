@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic test application using Rails API + ReactJS.
+The point of it all is to experiment with websockets and ActionCable.
+This application is a very basic chat application.
 
-Things you may want to cover:
+# Running the application
 
-* Ruby version
+```sh
+bundle install
+rails db:migrate
+rails s
 
-* System dependencies
+# in another terminal
+cd client
+npm install
+npm run dev
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Lastly, open a browser, and visit http://localhost:5173
