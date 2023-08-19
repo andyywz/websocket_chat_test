@@ -5,8 +5,8 @@ class Message < ApplicationRecord
 
   def broadcast_message
     ActionCable.server.broadcast("MessagesChannel", {
-      id:,
-      body:
+      id: id,
+      body: body
     })
   end
 end
